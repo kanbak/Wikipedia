@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12F13" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="ZFb-PY-he7">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="5">
+            <objects>
+                <viewController id="2" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mBq-t7-8na">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="238" id="Iaj-k0-9Ee"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PZa-sE-MiK">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="31" id="KWD-S7-Moe"/>
+                                    <constraint firstAttribute="width" constant="56" id="MEe-Z8-hbp"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="GO">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="goButton:" destination="2" eventType="touchUpInside" id="wf4-mN-x3H"/>
+                                </connections>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="singleLineEtched" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" translatesAutoresizingMaskIntoConstraints="NO" id="1Qw-37-eSb">
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="466" id="0Kb-o9-EYL"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="dataSource" destination="2" id="QFm-g9-m3B"/>
+                                    <outlet property="delegate" destination="2" id="zvs-ol-LVV"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="1Qw-37-eSb" firstAttribute="leading" secondItem="3" secondAttribute="leading" type="default" id="32X-Mf-pui"/>
+                            <constraint firstItem="PZa-sE-MiK" firstAttribute="baseline" secondItem="mBq-t7-8na" secondAttribute="baseline" type="default" id="5iO-2i-rH5"/>
+                            <constraint firstItem="1Qw-37-eSb" firstAttribute="trailing" secondItem="3" secondAttribute="trailing" type="default" id="MEK-k7-mw3"/>
+                            <constraint firstItem="mBq-t7-8na" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="4" id="Qeb-hN-Hsq"/>
+                            <constraint firstItem="PZa-sE-MiK" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="251" id="WfD-nP-Oo3"/>
+                            <constraint firstItem="PZa-sE-MiK" firstAttribute="top" secondItem="3" secondAttribute="top" constant="3" id="dq6-pw-Wmn"/>
+                            <constraint firstItem="1Qw-37-eSb" firstAttribute="bottom" secondItem="3" secondAttribute="bottom" type="default" id="g6Z-Pc-yNX"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Q1A-hp-guo"/>
+                    <connections>
+                        <outlet property="tableViewOutlet" destination="1Qw-37-eSb" id="DgV-pW-ZbU"/>
+                        <outlet property="textFieldOutlet" destination="mBq-t7-8na" id="Mxx-xo-uN7"/>
+                        <segue destination="5Nz-bQ-858" kind="push" identifier="toSecondView" id="xVC-Z6-0PA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="221" y="46"/>
+        </scene>
+        <!--Second View Controller - WIKIPEDIA READER-->
+        <scene sceneID="sMc-s6-zfc">
+            <objects>
+                <viewController modalTransitionStyle="flipHorizontal" id="5Nz-bQ-858" customClass="SecondViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="g5x-2L-gCR">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="Eqq-7C-EKt">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="113" id="M0Y-1X-hQ7"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kLd-eE-fGh">
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" none="YES" link="YES" image="YES" staticText="YES" summaryElement="YES" notEnabled="YES" updatesFrequently="YES"/>
+                                </accessibility>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="366" id="rps-AD-iFd"/>
+                                </constraints>
+                                <attributedString key="attributedText">
+                                    <fragment>
+                                        <string key="content">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                        <attributes>
+                                            <font key="NSFont" size="14" name="Helvetica"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" paragraphSpacingBefore="1" headerLevel="1"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" autocorrectionType="no"/>
+                                <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES" address="YES" calendarEvent="YES"/>
+                                <connections>
+                                    <outlet property="delegate" destination="5Nz-bQ-858" id="F6T-g0-ckr"/>
+                                </connections>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Eqq-7C-EKt" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="BKi-dy-eiR"/>
+                            <constraint firstItem="Eqq-7C-EKt" firstAttribute="top" secondItem="g5x-2L-gCR" secondAttribute="top" constant="8" id="d0V-l1-kav"/>
+                            <constraint firstItem="kLd-eE-fGh" firstAttribute="trailing" secondItem="g5x-2L-gCR" secondAttribute="trailing" type="default" id="ugT-MX-3FD"/>
+                            <constraint firstItem="kLd-eE-fGh" firstAttribute="leading" secondItem="g5x-2L-gCR" secondAttribute="leading" type="default" id="vDK-Nj-xjF"/>
+                            <constraint firstItem="Eqq-7C-EKt" firstAttribute="leading" secondItem="g5x-2L-gCR" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="yde-HO-g9G"/>
+                            <constraint firstItem="kLd-eE-fGh" firstAttribute="bottom" secondItem="g5x-2L-gCR" secondAttribute="bottom" type="default" id="yyr-vi-Y1Z"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="WIKIPEDIA READER" id="7Bn-YZ-0jC"/>
+                    <connections>
+                        <outlet property="dictionaryLabel" destination="Eqq-7C-EKt" id="EyO-CQ-XsB"/>
+                        <outlet property="dictionaryTextView" destination="kLd-eE-fGh" id="t5x-gk-0db"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="F7n-RC-jf0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="610" y="46"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="y2h-6S-6by">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="ZFb-PY-he7" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="7HA-hq-KLR">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="2" kind="relationship" relationship="rootViewController" id="Wrv-MX-w7I"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZZR-Nc-VlQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-277" y="64"/>
+        </scene>
+    </scenes>
+    <classes>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="SecondViewController" superclassName="ViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SecondViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="dictionaryLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="dictionaryTextView" candidateClass="UITextView"/>
+            </relationships>
+        </class>
+        <class className="ViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="goButton:"/>
+                <relationship kind="outlet" name="tableViewOutlet" candidateClass="UITableView"/>
+                <relationship kind="outlet" name="textFieldOutlet" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+    </classes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
