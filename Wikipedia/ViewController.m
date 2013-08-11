@@ -42,11 +42,8 @@
     
 	// Do any additional setup after loading the view, typically from a nib.
 }
--(BOOL)textFieldShouldReturn:(UITextField*)textField
-{
-    [textField resignFirstResponder];
-    return YES;
-}
+
+
 
 - (void)didReceiveMemoryWarning
 {
@@ -72,6 +69,12 @@
      }];
     
 }
+- (BOOL)textFieldShouldReturn:(UITextField *)textField{
+    [textField resignFirstResponder];
+    return YES;
+}
+
+
 #pragma mark UITableViewDataSource
 -(int) numberOfSectionsInTableView:(UITableView *)tableView
 {

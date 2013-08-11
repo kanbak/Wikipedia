@@ -40,6 +40,8 @@
     NSString *snippet2 = [dictionary objectForKey:@"snippet"];
         dictionaryLabel.text=search2;
     dictionaryTextView.text=snippet2;
+    self.navigationItem.title=[dictionary objectForKey:@"title"];
+    
 
 	// Do any additional setup after loading the view.
 }
